@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} \.(?:gif|jpg|png|css|js)$ [OR]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^([^/]+)$ index.php?type=$1 [NS]
+    RewriteRule ^(.*)/(.*)/$ index.php?type=$1&url=$2 [L]
+</IfModule>

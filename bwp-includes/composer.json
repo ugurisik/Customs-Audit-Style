@@ -1,0 +1,7 @@
+{
+	"require": {
+		"verot/class.upload.php": "*",
+		"google/recaptcha": "^1.2",
+		"swiftmailer/swiftmailer":"^6.0"
+	}
+}
